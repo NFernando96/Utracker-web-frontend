@@ -50,7 +50,7 @@ axios.post('http://localhost:4000/sign/add',obj)
         this.setState({
             email:'',
             password:''
-        })
+        });
 
     }
 
@@ -63,13 +63,15 @@ axios.post('http://localhost:4000/sign/add',obj)
                     <input
                         type="text"
                         required
-                        onChange={this.onChangeEmail} />
+                        onChange={this.onChangeEmail}
+                        value={this.state.email}/>
                     <div className="email error"></div>
 
                     <label htmlFor="password">Password</label>
                     <input type="password"
                         required
-                        onChange={this.onChangePassword} />
+                        onChange={this.onChangePassword}
+                           value={this.state.password}/>
                     <div className="password error"></div>
                     <button>Sign up</button>
                 </form>

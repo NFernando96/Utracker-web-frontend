@@ -6,6 +6,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Signin from './components/Signin';
+import Sidebar from './components/sidebar';
 
 
 
@@ -16,7 +17,9 @@ function App() {
       <BrowserRouter>
 
         <div className="row">
-          <div className="col-md-3"></div>
+          <div className="col-md-3">
+<Sidebar/>
+          </div>
           <div className="col-md-9">
             <h1>Utracker</h1>
             <Navbar />
