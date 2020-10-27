@@ -5,8 +5,8 @@ import './App.css';
 
 import Navbar from './components/Navbar';
 import Login from './components/Login';
-import Signin from './components/Signin';
-import Sidebar from './components/sidebar';
+import Signup from './components/Signup';
+//import Sidebar from './components/sidebar';
 
 
 
@@ -16,17 +16,17 @@ function App() {
     <div className="App">
       <BrowserRouter>
 
-        <div className="row">
-          <div className="col-md-3">
-<Sidebar/>
-          </div>
-          <div className="col-md-9">
-            <h1>Utracker</h1>
+        <div >
+
+
+
+
+            <h1 class="center"> Utracker</h1>
             <Navbar />
             <Route exatc path='/login' component={Login} />
-            <Route exatc path='/signin' component={Signin} />
+            <Route exatc path='/signin' component={Signup} />
 
-          </div>
+
         </div>
 
 

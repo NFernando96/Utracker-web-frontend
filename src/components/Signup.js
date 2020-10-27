@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Signin extends Component {
+export default class Signup extends Component {
 
     //to pass value
     constructor(props) {
@@ -39,17 +39,17 @@ export default class Signin extends Component {
             password: this.state.password
         };
 
-        //console.log(obj);
-axios.post('http://localhost:4000/sign/add',obj)
-    .then((res) => {console.log(res.data)})
-    .then(alert('User added succesfuly'));
+        console.log(obj);
+        axios.post('http://127.0.0.1:8000/api/admin', obj)
+            .then((res) => { console.log(res.data) })
+            .then(alert('User added succesfuly'));
 
 
 
 
         this.setState({
-            email:'',
-            password:''
+            email: '',
+            password: ''
         });
 
     }
@@ -64,14 +64,14 @@ axios.post('http://localhost:4000/sign/add',obj)
                         type="text"
                         required
                         onChange={this.onChangeEmail}
-                        value={this.state.email}/>
+                        value={this.state.email} />
                     <div className="email error"></div>
 
                     <label htmlFor="password">Password</label>
                     <input type="password"
                         required
                         onChange={this.onChangePassword}
-                           value={this.state.password}/>
+                        value={this.state.password} />
                     <div className="password error"></div>
                     <button>Sign up</button>
                 </form>

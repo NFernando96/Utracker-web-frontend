@@ -1,12 +1,12 @@
 .column {
-    float: left;
+  float: left;
   width: 25%;
   padding: 10px;
   height: 300px;
 }
 
 .column {
-    float: left;
+  float: left;
   width: 75%;
   padding: 10px;
   height: 300px;
@@ -14,9 +14,9 @@
 
 /* Clear floats after the columns */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 form{
